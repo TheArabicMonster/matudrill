@@ -1,0 +1,257 @@
+{
+  "version": 1,
+  "generatedAt": "2026-11-21T12:00:00Z",
+  "subjects": [
+    {
+      "id": "algebre",
+      "name": "Algèbre",
+      "pdf": "algebre.pdf",
+      "pages": 295
+    },
+    {
+      "id": "geometrie",
+      "name": "Géométrie",
+      "pdf": "geometrie.pdf",
+      "pages": 93
+    },
+    {
+      "id": "physique",
+      "name": "Physique I",
+      "pdf": "physique.pdf",
+      "pages": 123
+    }
+  ],
+  "sections": [
+    {
+      "subject": "algebre",
+      "id": "1.1",
+      "title": "Introduction aux ensembles"
+    },
+    {
+      "subject": "physique",
+      "id": "1.3",
+      "title": "Production de chaleur"
+    }
+  ],
+  "exercises": [
+    {
+      "id": "algebre-1.1",
+      "subject": "algebre",
+      "number": "1.1",
+      "title": null,
+      "section": "1.1",
+      "pages": [
+        13
+      ],
+      "statement": [
+        {
+          "src": "crops/algebre-1.1-statement-0.png",
+          "w": 1072,
+          "h": 583,
+          "page": 13,
+          "rect": [
+            40,
+            116,
+            555,
+            396
+          ]
+        }
+      ],
+      "parts": [
+        {
+          "label": "a",
+          "question": {
+            "src": "crops/algebre-1.1-q-a.png",
+            "w": 500,
+            "h": 45,
+            "page": 13
+          },
+          "answer": {
+            "src": "crops/algebre-1.1-s-a.png",
+            "w": 480,
+            "h": 40,
+            "page": 183
+          }
+        },
+        {
+          "label": "b",
+          "question": {
+            "src": "crops/algebre-1.1-q-b.png",
+            "w": 541,
+            "h": 45,
+            "page": 13
+          },
+          "answer": {
+            "src": "crops/algebre-1.1-s-b.png",
+            "w": 560,
+            "h": 40,
+            "page": 183
+          }
+        },
+        {
+          "label": "c",
+          "question": {
+            "src": "crops/algebre-1.1-q-c.png",
+            "w": 500,
+            "h": 45,
+            "page": 13
+          },
+          "answer": null
+        },
+        {
+          "label": "d",
+          "question": {
+            "src": "crops/algebre-1.1-q-d.png",
+            "w": 541,
+            "h": 45,
+            "page": 13
+          },
+          "answer": null
+        },
+        {
+          "label": "e",
+          "question": {
+            "src": "crops/algebre-1.1-q-e.png",
+            "w": 500,
+            "h": 45,
+            "page": 13
+          },
+          "answer": null
+        }
+      ],
+      "solution": {
+        "pages": [
+          183
+        ],
+        "crops": [
+          {
+            "src": "crops/algebre-1.1-solution-0.png",
+            "w": 1072,
+            "h": 239,
+            "page": 183
+          }
+        ],
+        "finalOnly": false
+      },
+      "flags": [
+        {
+          "code": "parts_answers_mismatch",
+          "message": "5 sous-questions, 2 réponses découpées (fixture)"
+        }
+      ],
+      "verified": false
+    },
+    {
+      "id": "algebre-1.2",
+      "subject": "algebre",
+      "number": "1.2",
+      "title": null,
+      "section": "1.1",
+      "pages": [
+        13,
+        14
+      ],
+      "statement": [
+        {
+          "src": "crops/algebre-1.2-statement-0.png",
+          "w": 1072,
+          "h": 583,
+          "page": 13
+        },
+        {
+          "src": "crops/algebre-1.2-statement-1.png",
+          "w": 1072,
+          "h": 141,
+          "page": 14
+        }
+      ],
+      "parts": [],
+      "solution": null,
+      "flags": [
+        {
+          "code": "split_pages",
+          "message": "exercice coupé sur 2 pages (p. 13 → 14)"
+        },
+        {
+          "code": "solution_missing",
+          "message": "solution introuvable (fixture)"
+        }
+      ],
+      "verified": false
+    },
+    {
+      "id": "physique-1.3",
+      "subject": "physique",
+      "number": "1.3",
+      "title": "Le prix d'un bain",
+      "section": "1.3",
+      "pages": [
+        29
+      ],
+      "statement": [
+        {
+          "src": "crops/physique-1.3-statement-0.png",
+          "w": 1072,
+          "h": 266,
+          "page": 29
+        }
+      ],
+      "parts": [
+        {
+          "label": "a",
+          "question": {
+            "src": "crops/physique-1.3-q-a.png",
+            "w": 916,
+            "h": 36,
+            "page": 29
+          },
+          "answer": {
+            "src": "crops/physique-1.3-s-a.png",
+            "w": 416,
+            "h": 36,
+            "page": 107
+          }
+        },
+        {
+          "label": "b",
+          "question": {
+            "src": "crops/physique-1.3-q-b.png",
+            "w": 916,
+            "h": 36,
+            "page": 29
+          },
+          "answer": {
+            "src": "crops/physique-1.3-s-b.png",
+            "w": 416,
+            "h": 36,
+            "page": 107
+          }
+        },
+        {
+          "label": "c",
+          "question": {
+            "src": "crops/physique-1.3-q-c.png",
+            "w": 916,
+            "h": 36,
+            "page": 29
+          },
+          "answer": {
+            "src": "crops/physique-1.3-s-c.png",
+            "w": 416,
+            "h": 36,
+            "page": 107
+          }
+        }
+      ],
+      "solution": {
+        "pages": [
+          107
+        ],
+        "crops": [],
+        "finalOnly": true
+      },
+      "flags": [],
+      "verified": true
+    }
+  ]
+}
