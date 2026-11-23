@@ -1,0 +1,235 @@
+.cart {
+  background: var(--surf);
+  border-radius: var(--radius-panel);
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+}
+
+.head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 16px 20px 12px;
+}
+
+.title {
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.headActions {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.items {
+  display: flex;
+  flex-direction: column;
+}
+
+.item {
+  padding: 12px 12px 14px 8px;
+  border-top: 1px solid var(--line);
+  transition: opacity var(--transition);
+}
+
+.itemTop {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  min-height: 28px;
+}
+
+.itemTitle {
+  font-size: 15px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.itemSubtitle {
+  font-size: 13px;
+  color: var(--text2);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  min-width: 0;
+}
+
+.itemPage {
+  font-size: 13px;
+  color: var(--text3);
+  margin-left: auto;
+  white-space: nowrap;
+}
+
+.handle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 32px;
+  flex: none;
+  border: 0;
+  border-radius: var(--radius-ctrl);
+  background: transparent;
+  color: var(--text3);
+  cursor: grab;
+}
+
+.handle:hover {
+  background: var(--panel);
+  color: var(--ink);
+}
+
+.handle:active {
+  cursor: grabbing;
+}
+
+.remove {
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  flex: none;
+  color: var(--text2);
+}
+
+.dragging {
+  opacity: 0.5;
+}
+
+.parts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  padding-left: 32px;
+  margin-top: 4px;
+}
+
+.part {
+  min-width: 28px;
+  height: 28px;
+  padding: 0 8px;
+  border: 1px solid var(--ctrl);
+  border-radius: 4px;
+  background: var(--surf);
+  color: var(--text2);
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  transition:
+    background-color var(--transition),
+    border-color var(--transition),
+    color var(--transition);
+}
+
+.part:hover {
+  background: var(--panel);
+  color: var(--ink);
+}
+
+.part[aria-pressed='true'] {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--on-ink);
+}
+
+.global {
+  padding-left: 32px;
+  margin-top: 2px;
+  font-size: 13px;
+  color: var(--text3);
+}
+
+.empty {
+  padding: 16px 20px 20px;
+  border-top: 1px solid var(--line);
+}
+
+.emptyTitle {
+  font-weight: 700;
+}
+
+.emptyText {
+  margin-top: 4px;
+  color: var(--text2);
+}
+
+.mode {
+  padding: 16px 20px 20px;
+  border-top: 1px solid var(--line);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.modeTitle {
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.modeControl {
+  width: 100%;
+}
+
+.modeControl > button {
+  flex: 1;
+  padding: 0 8px;
+}
+
+.modeText {
+  font-size: 13px;
+  color: var(--text3);
+}
+
+.foot {
+  margin-top: auto;
+  padding: 16px 20px 20px;
+  border-top: 1px solid var(--line);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.summary {
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.note {
+  font-size: 13px;
+  color: var(--text3);
+}
+
+.start {
+  margin-top: 16px;
+  width: 100%;
+  justify-content: space-between;
+  padding: 0 16px;
+}
+
+.start > kbd {
+  margin-left: auto;
+}
+
+.error {
+  margin-top: 8px;
+  color: var(--ko);
+  font-size: 13px;
+}
+
+.drawer {
+  height: 100%;
+  border-radius: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.drawer .items {
+  overflow-y: auto;
+  flex: 1;
+  min-height: 0;
+}

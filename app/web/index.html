@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="light dark" />
+    <meta name="description" content="Entraînement aux exercices des polycopiés d'algèbre, de géométrie et de physique." />
+    <!-- Applique data-theme avant le premier rendu pour éviter le flash blanc. -->
+    <script>
+      (function () {
+        try {
+          var preference = 'system';
+          try {
+            var stored = window.localStorage.getItem('matudrill-theme');
+            if (stored === 'light' || stored === 'dark' || stored === 'system') preference = stored;
+          } catch (error) {
+            /* localStorage indisponible : on suit le système. */
+          }
+          var dark =
+            preference === 'dark' ||
+            (preference === 'system' &&
+              typeof window.matchMedia === 'function' &&
+              window.matchMedia('(prefers-color-scheme: dark)').matches);
+          document.documentElement.setAttribute('data-theme', dark ? 'dark' : 'light');
+        } catch (error) {
+          document.documentElement.setAttribute('data-theme', 'light');
+        }
+      })();
+    </script>
+    <title>Matudrill</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

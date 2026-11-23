@@ -1,0 +1,163 @@
+.wrap {
+  padding: 40px 32px 64px;
+}
+
+.card {
+  max-width: 1120px;
+  margin: 0 auto;
+  background: var(--surf);
+  border-radius: var(--radius-panel);
+  padding: 48px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(280px, 360px);
+  gap: 56px;
+}
+
+.main {
+  min-width: 0;
+}
+
+.lead {
+  margin-top: 8px;
+  color: var(--text2);
+}
+
+.steps {
+  margin-top: 40px;
+  border-top: 1px solid var(--line);
+}
+
+.steps li {
+  display: flex;
+  gap: 20px;
+  padding: 24px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.stepNumber {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: none;
+  width: 28px;
+  height: 28px;
+  border-radius: 999px;
+  background: var(--marker);
+  color: var(--ink);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.stepTitle {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.stepText {
+  margin-top: 4px;
+  color: var(--text2);
+  max-width: 60ch;
+}
+
+.action {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-top: 32px;
+}
+
+.importButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  height: 44px;
+  padding: 0 20px;
+  border-radius: var(--radius-ctrl);
+  background: var(--accent);
+  color: var(--on-ink);
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color var(--transition);
+}
+
+.importButton:hover {
+  background: color-mix(in srgb, var(--accent) 86%, var(--ink));
+}
+
+.hint {
+  color: var(--text2);
+}
+
+.aside {
+  border-left: 1px solid var(--line);
+  padding-left: 40px;
+}
+
+.asideTitle {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.asideTitle + * {
+  margin-top: 8px;
+}
+
+.asideText {
+  color: var(--text2);
+}
+
+.asideList {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.asideList li {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  color: var(--text2);
+}
+
+.asideList svg {
+  flex: none;
+  margin-top: 2px;
+  color: var(--text3);
+}
+
+.rule {
+  border: 0;
+  border-top: 1px solid var(--line);
+  margin: 28px 0;
+}
+
+@media (max-width: 1023px) {
+  .card {
+    grid-template-columns: minmax(0, 1fr);
+    padding: 32px;
+    gap: 32px;
+  }
+
+  .aside {
+    border-left: 0;
+    border-top: 1px solid var(--line);
+    padding-left: 0;
+    padding-top: 28px;
+  }
+}
+
+@media (max-width: 833px) {
+  .wrap {
+    padding: 24px 16px 48px;
+  }
+
+  .card {
+    padding: 24px 20px;
+  }
+
+  .hint {
+    flex-basis: 100%;
+  }
+}

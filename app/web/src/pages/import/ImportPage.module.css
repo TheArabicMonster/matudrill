@@ -1,0 +1,277 @@
+.wrap {
+  padding: 24px 32px 48px;
+}
+
+.head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+}
+
+.title {
+  font-size: 26px;
+  font-weight: 700;
+}
+
+.notePanel {
+  margin-bottom: 16px;
+  padding: 16px 20px;
+  background: var(--surf);
+  border-radius: var(--radius-panel);
+  color: var(--text2);
+}
+
+.notePanel code {
+  padding: 1px 5px;
+  border-radius: 4px;
+  background: var(--panel);
+  color: var(--ink);
+  font-size: 13px;
+}
+
+.panel {
+  background: var(--surf);
+  border-radius: var(--radius-panel);
+  overflow: hidden;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+.table th:nth-child(1) {
+  width: 32%;
+}
+
+.table th:nth-child(2) {
+  width: 11%;
+}
+
+.table th:nth-child(3) {
+  width: 12%;
+}
+
+.table th:nth-child(4) {
+  width: 13%;
+}
+
+.table th:nth-child(5) {
+  width: 20%;
+}
+
+.table th {
+  padding: 12px 16px;
+  width: auto;
+  font-size: 13px;
+  font-weight: 400;
+  color: var(--text3);
+  text-align: left;
+  white-space: nowrap;
+}
+
+.table td {
+  padding: 10px 16px;
+  border-top: 1px solid var(--line);
+  vertical-align: middle;
+  font-size: 15px;
+}
+
+.fileCell {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  min-width: 0;
+}
+
+.fileCell svg {
+  flex: none;
+  margin-top: 2px;
+  color: var(--text3);
+}
+
+.fileName {
+  display: block;
+  font-weight: 600;
+  max-width: 34ch;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.filePages {
+  display: block;
+  font-size: 13px;
+  color: var(--text3);
+}
+
+.numeric {
+  font-variant-numeric: tabular-nums;
+}
+
+.warnPill,
+.okPill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  height: 28px;
+  padding: 0 10px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.warnPill {
+  background: var(--mid-bg);
+  color: var(--mid);
+}
+
+.okPill {
+  background: var(--ok-bg);
+  color: var(--ok);
+}
+
+.actionCell {
+  text-align: right;
+  white-space: nowrap;
+}
+
+.tableAction {
+  height: 36px;
+  padding: 0 12px;
+}
+
+.noAction {
+  font-size: 13px;
+  color: var(--text3);
+}
+
+.queueSection {
+  margin-top: 32px;
+}
+
+.queueHead {
+  display: flex;
+  align-items: baseline;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 12px;
+}
+
+.queueTitle {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.queueCount {
+  font-size: 15px;
+  color: var(--text2);
+}
+
+.queueList {
+  background: var(--surf);
+  border-radius: var(--radius-panel);
+  overflow: hidden;
+}
+
+.queueRow {
+  display: grid;
+  grid-template-columns: 24px minmax(0, 300px) 110px minmax(0, 1fr) 24px;
+  align-items: center;
+  gap: 16px;
+  padding: 14px 16px;
+  border-top: 1px solid var(--line);
+  color: var(--ink);
+  text-decoration: none;
+  transition: background-color var(--transition);
+}
+
+.queueList > li:first-child .queueRow {
+  border-top: 0;
+}
+
+.queueRow:hover {
+  background: var(--marker-soft);
+}
+
+.queueIcon {
+  display: inline-flex;
+  color: var(--mid);
+}
+
+.queueName {
+  font-weight: 700;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.queueMessage {
+  font-size: 15px;
+  color: var(--text2);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.chevron {
+  color: var(--text3);
+}
+
+.emptyQueue {
+  padding: 20px;
+  color: var(--text2);
+}
+
+.skeleton {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 16px;
+}
+
+@media (max-width: 1100px) {
+  .table th:nth-child(4),
+  .table td:nth-child(4) {
+    display: none;
+  }
+
+  .queueRow {
+    grid-template-columns: 24px minmax(0, 1fr) 24px;
+    row-gap: 4px;
+  }
+
+  .queueRow > :nth-child(3),
+  .queueRow > :nth-child(4) {
+    grid-column: 2;
+  }
+
+  .queueMessage {
+    white-space: normal;
+  }
+}
+
+@media (max-width: 833px) {
+  .wrap {
+    padding: 16px;
+  }
+
+  .table th:nth-child(3),
+  .table td:nth-child(3) {
+    display: none;
+  }
+
+  .table th,
+  .table td {
+    padding: 10px 12px;
+  }
+
+  .fileName {
+    max-width: 18ch;
+  }
+}

@@ -1,0 +1,148 @@
+.layer {
+  position: fixed;
+  inset: 0;
+  z-index: 60;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 80px 24px 24px;
+  overflow-y: auto;
+}
+
+.scrim {
+  position: fixed;
+  inset: 0;
+  background: transparent;
+}
+
+.panel {
+  position: relative;
+  width: min(600px, 100%);
+  max-height: calc(100vh - 120px);
+  display: flex;
+  flex-direction: column;
+  background: var(--surf);
+  border-radius: var(--radius-panel);
+  box-shadow: var(--shadow-float);
+}
+
+.head {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 20px 20px 16px 28px;
+}
+
+.title {
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1.25;
+  flex: 1;
+  min-width: 0;
+}
+
+.body {
+  padding: 0 28px 20px;
+  overflow-y: auto;
+}
+
+.marker {
+  display: inline-block;
+  background: var(--marker);
+  color: var(--ink);
+  font-size: 15px;
+  font-weight: 700;
+  padding: 1px 6px;
+  border-radius: 3px;
+}
+
+.statement {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 12px;
+  max-width: 360px;
+}
+
+.parts {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  margin-top: 20px;
+}
+
+.part {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 32px;
+}
+
+.check {
+  width: 20px;
+  height: 20px;
+  flex: none;
+  accent-color: var(--accent);
+  cursor: pointer;
+}
+
+.partLabel {
+  font-size: 15px;
+  font-weight: 600;
+  width: 14px;
+  flex: none;
+}
+
+.partImage {
+  max-height: 28px;
+  width: auto !important;
+}
+
+.single {
+  margin-top: 16px;
+  color: var(--text2);
+}
+
+.foot {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 16px 20px 16px 28px;
+  border-top: 1px solid var(--line);
+  flex-wrap: wrap;
+}
+
+.meta {
+  font-size: 13px;
+  color: var(--text3);
+}
+
+.footActions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+@media (max-width: 833px) {
+  .layer {
+    padding: 16px;
+    align-items: flex-end;
+  }
+
+  .panel {
+    max-height: calc(100vh - 32px);
+  }
+
+  .head {
+    padding: 16px 12px 12px 16px;
+  }
+
+  .body {
+    padding: 0 16px 16px;
+  }
+
+  .foot {
+    padding: 12px 16px;
+  }
+}

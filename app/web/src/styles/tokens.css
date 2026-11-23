@@ -1,0 +1,267 @@
+/* Tokens et styles globaux — DESIGN-v2.md, aucune valeur inventée. */
+
+/*
+ * Thème clair par défaut. Le script de index.html pose data-theme="light|dark"
+ * avant le premier rendu ; les valeurs sombres reprennent la charte validée.
+ */
+:root,
+:root[data-theme='light'] {
+  color-scheme: light;
+
+  --canvas: #f3f5f6;
+  --surf: #ffffff;
+  --panel: #ebeef0;
+  --ink: #14181b;
+  --on-ink: #ffffff;
+  --text2: #4a535a;
+  --text3: #5f6870;
+
+  --line: #d5dadf;
+  --ctrl: #7d878f;
+
+  --accent: #0a5c80;
+  --marker: #bfeafb;
+  --marker-soft: #e6f6fd;
+
+  --ok: #1e7a46;
+  --ok-bg: #ddf2e5;
+  --mid: #8a5a00;
+  --mid-bg: #fbefd5;
+  --ko: #b3261e;
+  --ko-bg: #fbe3e1;
+
+  --alg: #3b5bdb;
+  --geo: #2b8a3e;
+  --phy: #d9480f;
+
+  --scrim: rgba(20, 24, 27, 0.28);
+  --page-shade: rgba(20, 24, 27, 0.18);
+
+  --radius-ctrl: 6px;
+  --radius-panel: 10px;
+
+  --font: 'Atkinson Hyperlegible Next', system-ui, -apple-system, 'Segoe UI', sans-serif;
+
+  --shadow-float: 0 12px 32px rgba(20, 24, 27, 0.16), 0 2px 6px rgba(20, 24, 27, 0.08);
+  --transition: 160ms ease;
+}
+
+:root[data-theme='dark'] {
+  color-scheme: dark;
+
+  --canvas: #0F1214;
+  --surf: #171B1E;
+  --panel: #20262A;
+  --ink: #E8ECEE;
+  --on-ink: #0F1214;
+  --text2: #B4BDC3;
+  --text3: #95A0A8;
+
+  --line: #2C3439;
+  --ctrl: #7A868E;
+
+  --accent: #6CC0E6;
+  --marker: #123447;
+  --marker-soft: #102A38;
+
+  --ok: #6BD198;
+  --ok-bg: #12301F;
+  --mid: #E8BC66;
+  --mid-bg: #33270E;
+  --ko: #F49389;
+  --ko-bg: #3A1715;
+
+  --alg: #7D95F0;
+  --geo: #5CBF6E;
+  --phy: #F07A45;
+
+  --scrim: rgba(4, 6, 7, 0.62);
+  --page-shade: rgba(4, 6, 7, 0.5);
+
+  --shadow-float: 0 12px 32px rgba(0, 0, 0, 0.55), 0 2px 6px rgba(0, 0, 0, 0.4);
+}
+
+/*
+ * Transition de thème : uniquement au clic (classe posée par le bouton),
+ * strictement background-color et color, jamais au chargement.
+ */
+:root.theme-transition,
+:root.theme-transition *,
+:root.theme-transition *::before,
+:root.theme-transition *::after {
+  transition:
+    background-color 150ms ease,
+    color 150ms ease;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--canvas);
+  color: var(--ink);
+  font-family: var(--font);
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.45;
+  font-feature-settings: 'ss01';
+  -webkit-font-smoothing: antialiased;
+  caret-color: var(--accent);
+}
+
+h1,
+h2,
+h3,
+h4,
+p,
+ul,
+ol,
+figure,
+fieldset {
+  margin: 0;
+}
+
+ul,
+ol {
+  padding: 0;
+  list-style: none;
+}
+
+fieldset {
+  padding: 0;
+  border: 0;
+}
+
+h1 {
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+}
+
+h2 {
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+}
+
+h3 {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+a {
+  color: var(--accent);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+::selection {
+  background: var(--marker);
+  color: var(--ink);
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+/* Défilement accordé aux tokens, sans dépendre du thème du système. */
+* {
+  scrollbar-color: var(--ctrl) transparent;
+  scrollbar-width: thin;
+}
+
+*::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: var(--ctrl);
+  border: 3px solid transparent;
+  border-radius: 8px;
+  background-clip: padding-box;
+}
+
+.skip-link {
+  position: absolute;
+  top: -56px;
+  left: 16px;
+  z-index: 100;
+  padding: 8px 16px;
+  background: var(--ink);
+  color: var(--on-ink);
+  border-radius: var(--radius-ctrl);
+  font-weight: 600;
+  text-decoration: none;
+  transition: top var(--transition);
+}
+
+.skip-link:focus {
+  top: 8px;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  :root.theme-transition,
+  :root.theme-transition *,
+  :root.theme-transition *::before,
+  :root.theme-transition *::after {
+    transition: none !important;
+  }
+}

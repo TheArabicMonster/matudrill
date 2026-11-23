@@ -1,0 +1,20 @@
+.crop {
+  max-width: 100%;
+  height: auto;
+  image-rendering: auto;
+  background: var(--surf);
+}
+
+/*
+ * Les découpes sont des PNG à fond blanc. En sombre, on les inverse pour
+ * obtenir du texte clair sur fond sombre ; hue-rotate rétablit les teintes
+ * des graphiques. Le fond de l'image devient transparent pour ne pas
+ * afficher de rectangle noir sur la surface.
+ */
+:global(:root[data-theme='dark']) .crop {
+  background: transparent;
+  /* Après inversion le fond blanc devient noir : screen le rend transparent
+     sur la surface (le texte, clair, reste lisible). */
+  mix-blend-mode: screen;
+  filter: invert(1) hue-rotate(180deg);
+}

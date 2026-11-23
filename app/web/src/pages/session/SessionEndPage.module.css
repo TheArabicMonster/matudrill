@@ -1,0 +1,239 @@
+.wrap {
+  padding: 24px 32px 64px;
+}
+
+.panel {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 32px 40px 40px;
+  background: var(--surf);
+  border-radius: var(--radius-panel);
+}
+
+.title {
+  font-size: 26px;
+  font-weight: 700;
+}
+
+.lead {
+  margin-top: 8px;
+  color: var(--text2);
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.retour {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  margin-left: 8px;
+  font-size: 15px;
+  text-decoration: none;
+}
+
+.retour:hover {
+  text-decoration: underline;
+}
+
+.error {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 16px;
+  color: var(--ko);
+  font-size: 13px;
+}
+
+.retry {
+  border: 0;
+  background: none;
+  color: var(--accent);
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.rule {
+  border: 0;
+  border-top: 1px solid var(--line);
+  margin: 24px 0;
+}
+
+.sectionTitle {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.errorList,
+.exerciseList {
+  margin-top: 12px;
+}
+
+.errorRow {
+  display: grid;
+  grid-template-columns: 28px minmax(0, 1fr) auto auto;
+  align-items: center;
+  gap: 16px;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.errorIcon {
+  display: inline-flex;
+  color: var(--ko);
+}
+
+.errorLabel {
+  font-size: 15px;
+}
+
+.errorSection {
+  font-size: 13px;
+  color: var(--text3);
+}
+
+.empty {
+  margin-top: 12px;
+  color: var(--text2);
+}
+
+.allSection {
+  margin-top: 32px;
+}
+
+.exerciseRow {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto auto;
+  align-items: center;
+  gap: 16px;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.exerciseIdentity {
+  min-width: 0;
+}
+
+.exerciseName {
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.exerciseMeta {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 2px;
+  font-size: 13px;
+  color: var(--text3);
+}
+
+.partPills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  justify-content: flex-end;
+}
+
+.exerciseTime {
+  font-size: 13px;
+  color: var(--text2);
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+  text-align: right;
+}
+
+.exerciseTimeEmpty {
+  color: var(--text3);
+}
+
+.partPill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  height: 28px;
+  padding: 0 10px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.part_ok {
+  background: var(--ok-bg);
+  color: var(--ok);
+}
+
+.part_mid {
+  background: var(--mid-bg);
+  color: var(--mid);
+}
+
+.part_ko {
+  background: var(--ko-bg);
+  color: var(--ko);
+}
+
+.part_todo {
+  background: var(--panel);
+  color: var(--text2);
+}
+
+.skeletonBody {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.back {
+  margin-top: 16px;
+}
+
+.back a {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+@media (max-width: 833px) {
+  .wrap {
+    padding: 16px;
+  }
+
+  .panel {
+    padding: 24px 20px 32px;
+  }
+
+  .retour {
+    margin-left: 0;
+  }
+
+  .errorRow {
+    grid-template-columns: 24px minmax(0, 1fr);
+    row-gap: 4px;
+  }
+
+  .errorSection {
+    grid-column: 2;
+  }
+
+  .exerciseRow {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .partPills {
+    justify-content: flex-start;
+  }
+
+  .exerciseTime {
+    text-align: left;
+  }
+}
