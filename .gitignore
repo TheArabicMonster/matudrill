@@ -1,0 +1,22 @@
+node_modules/
+data/
+app-data/
+dist/
+.venv/
+__pycache__/
+.pytest_cache/
+*.log
+data-live/
+.credentials
+.orchestration/
+
+# Documents d'école : jamais versionnés.
+pdfs/
+*.pdf
+
+# Maquettes de travail et notes internes : restent en local.
+design/
+
+# Documentation de travail non publiée (seul le README est versionné).
+*.md
+!/README.md
